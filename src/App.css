@@ -32,3 +32,33 @@
 .card.selected {
   background-color: yellow;
 }
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+.field {
+  color: white;
+  display: flex;
+  background-color: green;
+}
+
+.placeholder-outer {
+  text-align: center;
+}
+
+.placeholder {
+  border: 5px solid white;
+  border-radius: 20px;
+  width: 150px;
+  height: 250px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+.placeholder + figcaption {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+}

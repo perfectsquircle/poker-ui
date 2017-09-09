@@ -5,7 +5,7 @@ import './App.css';
 class Card extends Component {
   render() {
     return (
-      <button onClick={() => this.props.onClick()} className={this.props.selected ? "selected card" : "card"}>
+      <button className={"card" + (this.props.selected ? ' selected' : '')} onClick={() => this.props.onClick()}>
         {this.props.value}
       </button>
     );
@@ -43,9 +43,24 @@ class Hand extends Component {
 }
 
 class App extends Component {
-
   render() {
-    return (<Hand />)
+    return (
+      <main>
+        <section className="table">
+          <div className="field">
+            {["Calvin", "Shane", "Jake", "Lucas"].map((name) => {
+              return <figure className="placeholder-outer">
+                <div className="placeholder"></div>
+                <figcaption>{name}</figcaption>
+              </figure>
+            })}
+          </div>
+        </section>
+        <section>
+          <Hand />
+        </section>
+      </main>
+    )
   }
 }
 
